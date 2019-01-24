@@ -1,0 +1,127 @@
+mutation {
+  post(
+    url: "www.prisma.io"
+    description: "Prisma replaces traditional ORMs"
+  ) {
+    id
+  }
+}
+
+
+query {
+  feed {
+    id
+    url
+    description
+  }
+}
+
+mutation {
+  signup(
+    name: "Voltis"
+    email: "voltis@prisma.io"
+    password: "graphql"
+  ) {
+    token
+    user {
+      id
+    }
+  }
+}
+
+
+mutation {
+  login(
+    email: "voltis@prisma.io"
+    password: "graphql"
+  ) {
+    token
+    user {
+      email
+      links {
+        url
+        description
+      }
+    }
+  }
+}
+
+subscription {
+  newLink {
+      id
+      url
+      description
+      postedBy {
+        id
+        name
+        email
+      }
+  }
+}
+
+subscription {
+  newVote {
+    id
+    link {
+      url
+      description
+    }
+    user {
+      name
+      email
+    }
+  }
+}
+
+mutation {
+  vote(linkId: "__LINK_ID__") {
+    link {
+      url
+      description
+    }
+    user {
+      name
+      email
+    }
+  }
+}
+
+query {
+  feed(filter:"QL") {
+    id
+  	description
+    url
+    postedBy {
+      id
+      name
+    }
+  }
+}
+
+query {
+  feed(
+    first: 1
+    skip: 1
+  ) {
+    id
+    description
+    url
+  }
+}
+
+
+query {
+  feed(orderBy: createdAt_ASC) {
+    id
+    description
+    url
+  }
+}
+
+…………………………
+
+{
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjanJiNWl0N2wycHVxMGEyNWg1cWpuZnptIiwiaWF0IjoxNTQ4MzY2NjQ0fQ.qR4UVKQepRbC4M2ramkD38dWGAi4I47G7RUuDHIXPdA"
+}
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjanJiNm43d2IzZzNnMGE5MmI4bHRpZ2Z4IiwiaWF0IjoxNTQ4MzY4NTI5fQ._r5A6n-ke6hN0Ulj5L19vYLwrLxgSCdufZ7X4qFIyjU

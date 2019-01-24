@@ -3,10 +3,11 @@
 HackerNews clone site with react and graphql
 
 # Start the web app
-In the client you run:
-
+In the server you run:
 `npm install`
-
+`prisma deploy`
+follow up with demo server and configure prisma
+`prisma generate`
 `node src/index.js`
 
 Runs the graphql server playground 

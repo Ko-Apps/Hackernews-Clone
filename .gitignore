@@ -1,0 +1,3 @@
+.DS_Store
+server/yarn.lock
+server/node_modules

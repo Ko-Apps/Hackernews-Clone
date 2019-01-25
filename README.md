@@ -8,7 +8,7 @@ In the server you run:
 `prisma deploy`
 follow up with demo server and configure prisma
 `prisma generate`
-`node src/index.js`
+`npm start`
 
 Runs the graphql server playground 
 

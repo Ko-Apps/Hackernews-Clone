@@ -86,6 +86,21 @@ mutation {
   }
 }
 
+mutation {
+  prismaLink: post(
+    description: "Prisma replaces traditional ORMs and makes it easy to build GraphQL servers 😎",
+    url: "https://www.prisma.io"
+  ) {
+    id
+  }
+  apolloLink: post(
+    description: "The best GraphQL client for React",
+    url: "https://www.apollographql.com/docs/react/"
+  ) {
+    id
+  }
+}
+
 query {
   feed(filter:"QL") {
     id
@@ -108,6 +123,7 @@ query {
     url
   }
 }
+
 
 
 query {
